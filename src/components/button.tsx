@@ -16,9 +16,7 @@ type ButtonIconProps = {
 function Button({ children, ...rest }: ButtonProps) {
   return (
     <TouchableOpacity
-      className={
-        "5-12 bg-lime-400 rounded-md items-center justify-center flex-row"
-      }
+      className="bg-gradient-to-r from-lime-400 to-green-500 rounded-md items-center justify-center flex-row py-3 px-5 shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-105"
       activeOpacity={0.7}
       {...rest}
     >
@@ -29,11 +27,11 @@ function Button({ children, ...rest }: ButtonProps) {
 
 function ButtonText({ children }: ButtonTextProps) {
   return (
-    <Text className="text-black font-heading text-base mx-2">{children}</Text>
+    <Text className="text-white font-heading text-lg mx-2">{children}</Text>
   );
 }
 
-function ButtonIcon({ children }: ButtonProps) {
+function ButtonIcon({ children }: ButtonIconProps) {
   return children;
 }
 

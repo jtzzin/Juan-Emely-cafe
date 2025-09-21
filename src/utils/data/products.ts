@@ -38,12 +38,12 @@ export const MENU: { title: string; data: ProductProps[] }[] = [
     data: [
       {
         id: "3",
-        title: "Brownie",
+        title: "Mate",
         price: 5.0,
         description: "cafe 3",
         cover: require("../../assets/products/cover/Coffe3.png"),
         thumbnail: require("../../assets/products/thumbnail/Coffe3.png"),
-        ingredients: ["Brownie", "Sorvete"],
+        ingredients: ["Segredo", "Doce"],
       }
     ]
   }

@@ -1,5 +1,3 @@
-// src/app/products/index.tsx
-
 import { View, Text, SectionList, Image, TouchableOpacity } from "react-native";
 import { MENU } from "@/utils/data/products";
 import { useAuthStore } from "@/stores/auth-store";
@@ -23,7 +21,9 @@ export default function Products() {
       <View className="flex-row justify-between items-center mb-6">
         <Text className="text-white text-2xl font-bold">Produtos</Text>
         <TouchableOpacity onPress={handleLogout}>
-          <Text className="text-red-400 font-semibold">Sair</Text>
+          <Text className="text-red-500 font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+            Sair
+          </Text>
         </TouchableOpacity>
       </View>
 

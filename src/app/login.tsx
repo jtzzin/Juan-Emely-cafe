@@ -1,5 +1,3 @@
-// src/app/login.tsx
-
 import { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
 import { useRouter } from "expo-router";
@@ -54,7 +52,7 @@ export default function Login() {
 
       <TouchableOpacity
         onPress={handleLogin}
-        className="bg-lime-500 w-full p-4 rounded items-center"
+        className="bg-gradient-to-r from-lime-400 to-green-500 w-full p-4 rounded-md items-center shadow-md transform transition-transform duration-300 ease-in-out hover:scale-105"
       >
         <Text className="text-white font-bold">Entrar</Text>
       </TouchableOpacity>

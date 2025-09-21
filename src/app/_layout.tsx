@@ -1,5 +1,3 @@
-// app/_layout.tsx
-
 import React, { useEffect } from "react";
 import { Slot, useRouter, usePathname } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -12,11 +10,13 @@ import {
 } from "@expo-google-fonts/inter";
 import { Loading } from "@/components/loading";
 import { useAuthStore } from "@/stores/auth-store";
+import { useColorScheme } from "react-native";
 
 export default function Layout() {
   const router = useRouter();
   const pathname = usePathname();
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
+  const theme = useColorScheme(); // 👈 Detecta o tema do sistema
 
   const [fontsLoaded] = useFonts({
     Inter_400Regular,
@@ -25,7 +25,6 @@ export default function Layout() {
     Inter_700Bold,
   });
 
-  // Bloqueia acesso a qualquer rota (exceto /login) até que o usuário esteja autenticado
   useEffect(() => {
     if (!fontsLoaded) return;
     if (!isAuthenticated && pathname !== "/login") {
@@ -38,7 +37,9 @@ export default function Layout() {
   }
 
   return (
-    <SafeAreaView className="bg-slate-900 flex-1">
+    <SafeAreaView
+      className={theme === "dark" ? "bg-gray-900 flex-1" : "bg-white flex-1"}
+    >
       <Slot />
     </SafeAreaView>
   );

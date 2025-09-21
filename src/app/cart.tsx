@@ -8,7 +8,6 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from "react-native";
-
 import { Header } from "@/components/header";
 import { productCartProps, useCartStore } from "@/stores/cart-store";
 import { Product } from "@/components/products";
