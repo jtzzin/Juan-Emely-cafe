@@ -29,7 +29,7 @@ export const MENU: { title: string; data: ProductProps[] }[] = [
         description: "Café expresso com bastante leite vaporizado.",
         cover: require("../../assets/products/cover/Coffe2.png"),
         thumbnail: require("../../assets/products/thumbnail/Coffe2.png"),
-        ingredients: ["Espresso", "Leite vaporizado"],
+        ingredients: ["Mel", "Leite vaporizado"],
       }
     ] 
   },
