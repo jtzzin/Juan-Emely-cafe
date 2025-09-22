@@ -20,7 +20,7 @@ export const MENU: { title: string; data: ProductProps[] }[] = [
         description: "Café expresso com leite vaporizado e espuma cremosa.",
         cover: require("../../assets/products/cover/Coffe1.png"),
         thumbnail: require("../../assets/products/thumbnail/Coffe1.png"),
-        ingredients: ["Espresso", "Leite vaporizado", "Espuma de leite"],
+        ingredients: ["Mel", "Leite vaporizado", "Espuma de leite"],
       },
       {
         id: "2",
