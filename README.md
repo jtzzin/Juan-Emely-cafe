@@ -1,107 +1,82 @@
-# Juan Emely Café
+☕ Juan Emely Café
 
 Aplicativo mobile de cardápio de café desenvolvido com React Native e Expo Router.
 
----
+📖 Sobre o Projeto
 
-## Sobre o Projeto
+App para exibir produtos de uma cafeteria, com login simples, lista de produtos por categorias e detalhes de cada item.
 
-Este projeto é um app para exibir produtos de uma cafeteria, com login simples, lista de produtos organizados por categorias e detalhes de cada produto.
+🛠️ Tecnologias usadas
 
----
+React Native 0.79.5
 
-## Tecnologias usadas
+Expo 53.0.20
 
-O projeto utiliza as seguintes dependências principais:
+Expo Router 5.1.4
 
-- React Native 0.79.5  
-- Expo 53.0.20  
-- Expo Router 5.1.4  
-- Zustand 5.0.7 (gerenciamento de estado)  
-- NativeWind 2.0.11 (Tailwind CSS para React Native)  
-- Expo Google Fonts (Inter) 0.4.1  
-- React Navigation 7.1.6  
-- Outras bibliotecas relacionadas a UI, navegação, animação, etc.
+Zustand 5.0.7 (gerenciamento de estado)
 
-Para detalhes completos, consulte o arquivo `package.json`.
+NativeWind 2.0.11 (Tailwind CSS para React Native)
 
----
+Expo Google Fonts (Inter) 0.4.1
 
-## Scripts disponíveis
+React Navigation 7.1.6
 
-No projeto, você pode rodar os seguintes comandos via npm ou yarn:
+Outras libs para UI, navegação, animação, etc.
 
-| Script    | Descrição                    |
-|-----------|------------------------------|
-| `start`   | Inicia o servidor do Expo     |
-| `android` | Abre o app no emulador Android|
-| `ios`     | Abre o app no simulador iOS   |
-| `web`     | Inicia o app no navegador web |
-| `test`    | Executa testes com Jest       |
+Para detalhes completos, veja o arquivo package.json.
 
-Exemplo:
+🚀 Scripts disponíveis
 
+Você pode rodar os seguintes comandos via npm ou yarn:
+
+Comando	O que faz
+start	Inicia o servidor do Expo
+android	Abre o app no emulador Android
+ios	Abre o app no simulador iOS
+web	Inicia o app no navegador web
+test	Executa testes com Jest
+
+Exemplo de uso:
 
 npm run start
 
-Funcionalidades:
+✨ Funcionalidades
 
-- Tela de login com autenticação simples (usuários válidos hardcoded)
+Tela de login com autenticação simples (usuários hardcoded)
 
-- Redirecionamento de rotas baseado em autenticação
+Redirecionamento de rotas baseado em autenticação
 
-- Lista de produtos dividida por categorias (cafés, sobremesas etc)
+Lista de produtos dividida por categorias (cafés, sobremesas, etc)
 
-- Tela de detalhes do produto com imagem, descrição e ingredientes
+Tela de detalhes com imagem, descrição e ingredientes
 
-- Logout para voltar à tela de login
+Logout para voltar à tela de login
 
+🏃‍♂️ Como rodar o projeto
 
-Como rodar
-
-Clone o repositório
-
-
-Copiar código
+Clone o repositório:
 
 git clone https://github.com/jtzzin/Juan-Emely-cafe.git
 
-Entre na pasta do projeto
 
-
-Copiar código
+Entre na pasta do projeto:
 
 cd Juan-Emely-cafe
 
-Instale as dependências
 
-O projeto utiliza as seguintes dependências principais:
+Instale as dependências:
 
-- React Native 0.79.5  
-- Expo 53.0.20  
-- Expo Router 5.1.4  
-- Zustand 5.0.7 (gerenciamento de estado)  
-- NativeWind 2.0.11 (Tailwind CSS para React Native)  
-- Expo Google Fonts (Inter) 0.4.1  
-- React Navigation 7.1.6  
-- Outras bibliotecas relacionadas a UI, navegação, animação, etc.
-
-Para detalhes completos, consulte o arquivo `package.json`.
-
-
-Copiar código
 npm install
 
-Rode o projeto
 
-
-Copiar código
+Rode o projeto:
 
 npm run start
 
-Usuários de teste
-
-Email	
-user@cafe.com	123456 // Senha - 123456
-admin@cafe.com // Senha -	adminpass
-
+👥 Usuários de teste
+Email	Senha
+user@cafe.com
+	123456
+admin@cafe.com
+	adminpass

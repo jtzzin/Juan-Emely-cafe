@@ -2,7 +2,7 @@
   "name": "hamburguer",
   "main": "expo-router/entry",
   "version": "1.0.0",
-  "author": "Godoy",
+  "author": "Juan",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
