@@ -17,7 +17,7 @@ export const MENU: { title: string; data: ProductProps[] }[] = [
         id: "1",
         title: "Cappuccino",
         price: 3.5,
-        description: "Café espresso com leite vaporizado e espuma cremosa.",
+        description: "Café expresso com leite vaporizado e espuma cremosa.",
         cover: require("../../assets/products/cover/Coffe1.png"),
         thumbnail: require("../../assets/products/thumbnail/Coffe1.png"),
         ingredients: ["Espresso", "Leite vaporizado", "Espuma de leite"],
@@ -26,7 +26,7 @@ export const MENU: { title: string; data: ProductProps[] }[] = [
         id: "2",
         title: "Latte",
         price: 4.0,
-        description: "Café espresso com bastante leite vaporizado.",
+        description: "Café expresso com bastante leite vaporizado.",
         cover: require("../../assets/products/cover/Coffe2.png"),
         thumbnail: require("../../assets/products/thumbnail/Coffe2.png"),
         ingredients: ["Espresso", "Leite vaporizado"],
@@ -34,7 +34,7 @@ export const MENU: { title: string; data: ProductProps[] }[] = [
     ] 
   },
   {
-    title: "Sobremesas",
+    title: "Premium",
     data: [
       {
         id: "3",
