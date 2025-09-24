@@ -1,6 +1,6 @@
 import { View, Text, SectionList, Image, TouchableOpacity } from "react-native";
 import { MENU } from "@/utils/data/products";
-import { useAuthStore } from "@/stores/auth-store";
+import { useAuthStore } from "@/stores/helpers/auth-store";
 import { useRouter } from "expo-router";
 
 export default function Products() {

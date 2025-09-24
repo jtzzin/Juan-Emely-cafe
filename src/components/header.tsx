@@ -1,7 +1,8 @@
 import { Image, View, Text, TouchableOpacity } from "react-native";
 import { Feather } from "@expo/vector-icons";
+import { Link } from "expo-router"; // Usando Link para navegação
 import colors from "tailwindcss/colors";
-import { Link } from "expo-router";
+import { useCartStore } from "@/stores/helpers/cart-store";
 
 type HeaderProps = {
   title: string;

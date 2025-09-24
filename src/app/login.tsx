@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
 import { useRouter } from "expo-router";
-import { useAuthStore } from "@/stores/auth-store";
+import { useAuthStore } from "@/stores/helpers/auth-store";
 
 export default function Login() {
   const [email, setEmail] = useState("");

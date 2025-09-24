@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   View,
   Text,
@@ -8,8 +8,9 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from "react-native";
+
 import { Header } from "@/components/header";
-import { productCartProps, useCartStore } from "@/stores/cart-store";
+import { productCartProps, useCartStore } from "@/stores/helpers/cart-store";
 import { Product } from "@/components/products";
 import { formatCurrency } from "@/utils/functions/format-currency";
 import { Input } from "@/components/input";
@@ -18,12 +19,17 @@ import { Feather } from "@expo/vector-icons";
 import { LinkButton } from "@/components/link-button";
 import { useRouter } from "expo-router";
 
-const PHONE_NUMBER = "5519992642050"; // meu tel de exemplo
+const PHONE_NUMBER = "5519992642050"; // telefone contato
 
 export default function Cart() {
   const [address, setAddress] = useState("");
   const cartStore = useCartStore();
   const router = useRouter();
+
+  //  Log para verificar se os produtos estão sendo adicionados corretamente
+  useEffect(() => {
+    console.log("Carrinho atual:", cartStore.products);
+  }, [cartStore.products]);
 
   const total = formatCurrency(
     cartStore.products.reduce(

@@ -26,22 +26,21 @@ Outras libs para UI, navegação, animação, etc.
 
 Para detalhes completos, veja o arquivo package.json.
 
-🚀 Scripts disponíveis
 
 Você pode rodar os seguintes comandos via npm ou yarn:
 
-Comando	O que faz
-start	Inicia o servidor do Expo
+
+start - Inicia o servidor do Expo
 android	Abre o app no emulador Android
-ios	Abre o app no simulador iOS
+
 web	Inicia o app no navegador web
-test	Executa testes com Jest
+
 
 Exemplo de uso:
 
 npm run start
 
-✨ Funcionalidades
+ Funcionalidades
 
 Tela de login com autenticação simples (usuários hardcoded)
 

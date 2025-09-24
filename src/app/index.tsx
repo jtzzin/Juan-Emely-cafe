@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "expo-router";
-import { useAuthStore } from "@/stores/auth-store";
+import { useAuthStore } from "@/stores/helpers/auth-store";
 
 export default function Index() {
   const router = useRouter();

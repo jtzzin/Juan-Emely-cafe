@@ -1,16 +1,14 @@
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
 import { MENU, ProductProps } from "@/utils/data/products";
-import { useCartStore } from "@/stores/cart-store";
+import { useCartStore } from "@/stores/helpers/cart-store";
 
 export default function ProductDetails() {
   const { id } = useLocalSearchParams();
   const router = useRouter();
-  const { add } = useCartStore(); // <-- pega a função add do store
+  const add = useCartStore((state) => state.add);
 
-  const product: ProductProps | undefined = MENU.flatMap((cat) => cat.data).find(
-    (item) => item.id === id
-  );
+  const product = MENU.flatMap((cat) => cat.data).find((item) => item.id === id);
 
   if (!product) {
     return (
@@ -44,10 +42,12 @@ export default function ProductDetails() {
         R$ {product.price.toFixed(2)}
       </Text>
 
-      {/* Botão para adicionar ao carrinho */}
       <TouchableOpacity
-        onPress={() => add(product)}
-        className="mt-6 bg-gradient-to-r from-lime-400 to-green-500 py-3 rounded-lg items-center shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-105"
+        onPress={() => {
+          add(product);
+          console.log("Adicionado ao carrinho:", product.title);
+        }}
+        className="mt-6 bg-lime-500 py-3 rounded-lg items-center"
       >
         <Text className="text-white font-bold text-lg">Adicionar ao Carrinho</Text>
       </TouchableOpacity>

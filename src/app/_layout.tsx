@@ -9,14 +9,14 @@ import {
   Inter_700Bold,
 } from "@expo-google-fonts/inter";
 import { Loading } from "@/components/loading";
-import { useAuthStore } from "@/stores/auth-store";
+import { useAuthStore } from "@/stores/helpers/auth-store";
 import { useColorScheme } from "react-native";
 
 export default function Layout() {
   const router = useRouter();
   const pathname = usePathname();
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
-  const theme = useColorScheme(); // 👈 Detecta o tema do sistema
+  const theme = useColorScheme(); //  Detecta o tema do sistema
 
   const [fontsLoaded] = useFonts({
     Inter_400Regular,
