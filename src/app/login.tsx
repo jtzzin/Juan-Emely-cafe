@@ -1,3 +1,6 @@
+// app/login.tsx
+
+
 import { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
 import { useRouter } from "expo-router";
@@ -21,7 +24,8 @@ export default function Login() {
 
     if (isValid) {
       login();
-      router.replace("/product"); 
+      // 🛑 CORREÇÃO: Navegue para a raiz da aplicação '/'
+      router.replace("/"); 
     } else {
       Alert.alert("Erro", "Credenciais inválidas.");
     }

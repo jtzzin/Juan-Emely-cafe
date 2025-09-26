@@ -1,20 +1,26 @@
-import { Image, View, Text, TouchableOpacity } from "react-native";
+// src/components/header.tsx
+
+import { Image, View, Text, Pressable } from "react-native";
 import { Feather } from "@expo/vector-icons";
-import { Link } from "expo-router"; // Usando Link para navegação
+import { Link } from "expo-router";
 import colors from "tailwindcss/colors";
-import { useCartStore } from "@/stores/helpers/cart-store";
+import { useCartStore } from "@/stores/helpers/cart-store"; 
 
 type HeaderProps = {
   title: string;
-  cartQuantityItem?: number;
 };
 
-export function Header({ title, cartQuantityItem = 0 }: HeaderProps) {
+export function Header({ title }: HeaderProps) {
+  const cartQuantityItem = useCartStore((state) =>
+    state.items.reduce((acc, item) => acc + item.quantity, 0)
+  );
+
   return (
     <View className="flex-row items-center justify-between border-b border-slate-700 pb-5 pt-2 px-5">
       <View className="flex-row items-center gap-2">
         <Image
-          source={require("@/assets/logo.png")}
+          // 🛑 CORREÇÃO DO CAMINHO: 'src/components/' para 'assets/' na raiz.
+          source={require("./logo.png")} 
           className="h-6 w-32"
           resizeMode="contain"
         />
@@ -23,7 +29,8 @@ export function Header({ title, cartQuantityItem = 0 }: HeaderProps) {
 
       {cartQuantityItem > 0 ? (
         <Link href="/cart" asChild>
-          <TouchableOpacity className="relative">
+          {/* ✅ Usando Pressable para que o Link funcione corretamente */}
+          <Pressable className="relative"> 
             <View className="p-2 border border-slate-700 rounded-full">
               <Feather name="shopping-bag" color={colors.white} size={24} />
             </View>
@@ -32,13 +39,13 @@ export function Header({ title, cartQuantityItem = 0 }: HeaderProps) {
                 {cartQuantityItem}
               </Text>
             </View>
-          </TouchableOpacity>
+          </Pressable>
         </Link>
       ) : (
         <Link href="/cart" asChild>
-          <TouchableOpacity className="relative p-2">
+          <Pressable className="relative p-2">
             <Feather name="shopping-bag" color={colors.white} size={24} />
-          </TouchableOpacity>
+          </Pressable>
         </Link>
       )}
     </View>

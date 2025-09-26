@@ -1,3 +1,5 @@
+// app/product/[id].tsx (Trecho Ajustado)
+
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
 import { MENU, ProductProps } from "@/utils/data/products";
@@ -46,6 +48,8 @@ export default function ProductDetails() {
         onPress={() => {
           add(product);
           console.log("Adicionado ao carrinho:", product.title);
+          // ✅ AJUSTE: NAVEGAÇÃO AUTOMÁTICA
+          router.push("/cart"); 
         }}
         className="mt-6 bg-lime-500 py-3 rounded-lg items-center"
       >
